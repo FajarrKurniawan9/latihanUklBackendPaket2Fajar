@@ -2,11 +2,11 @@
   "name": "latihanuklbackendpaket2fajar",
   "version": "1.0.0",
   "description": "Sistem Pengelolaan Inventaris Barang Sekolah",
-  "main": "server.js",
+  "main": "servers.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
+    "dev": "nodemon index.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:seed": "node prisma/seed.js"

@@ -34,7 +34,7 @@ async function main() {
       },
     ],
   });
-  console.log(`Created ${users.count} users`);
+  console.log(`✅ Created ${users.count} users`);
 
   // Seed Inventory
   const inventory = await prisma.inventory.createMany({

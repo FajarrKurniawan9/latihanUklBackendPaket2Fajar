@@ -4,7 +4,7 @@ import md5 from "md5";
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log("Starting seeding...");
+  console.log("🌱Starting seeding...");
 
   // Hapus data lama
   await prisma.borrow.deleteMany();
@@ -34,7 +34,7 @@ async function main() {
       },
     ],
   });
-  console.log(`Created ${users.count} users`);
+  console.log(`✅ Created ${users.count} users`);
 
   // Seed Inventory
   const inventory = await prisma.inventory.createMany({
