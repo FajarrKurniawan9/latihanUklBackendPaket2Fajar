@@ -17,6 +17,6 @@ app.use("/api/inventory", inventoryRoute);
 app.use("/api/inventory", borrowRoute);
 
 app.listen(port, () => {
-  console.log(`Server berjalan pada http://localhost:${port}`);
-  console.log(`Inventory Management System - Ready!`);
+  console.log(`🚀 Server berjalan pada http://localhost:${port}`);
+  console.log(`📚 Inventory Management System - Ready!`);
 });
