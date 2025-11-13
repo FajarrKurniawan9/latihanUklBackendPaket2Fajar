@@ -13,8 +13,8 @@ app.use(express.json());
 
 // Routes
 app.use("/auth", authRoute);
-app.use("/inventory", inventoryRoute);
-app.use("/inventory", borrowRoute);
+app.use("/api/inventory", inventoryRoute);
+app.use("/api/inventory", borrowRoute);
 
 app.listen(port, () => {
   console.log(`Server berjalan pada http://localhost:${port}`);
