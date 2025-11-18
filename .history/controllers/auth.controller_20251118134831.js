@@ -8,49 +8,8 @@ const SECRET_KEY = process.env.JWT_SECRET || "r4h4s14_1nv3nt0ry_s3k0l4h_2024";
 export const register = async (req, res) => {
   try {
     const { name, username, password, role } = req.body;
-    // Validasi input
-    if (!name || !username || !password || !role) {
-      return res.status(400).json({
-        success: false,
-        message: "Semua field harus diisi",
-      });
-    }
-    // Cek apakah username sudah digunakan
-    const existingUser = await prisma.user.findUnique({
-      where: { username },
-    });
-    if (existingUser) {
-      return res.status(409).json({
-        success: false,
-        message: "Username sudah digunakan",
-      });
-    }
-    // Buat user baru
-    const newUser = await prisma.user.create({
-      data: {
-        name,
-        username,
-        password: md5(password),
-        role,
-      },
-    });
-    res.status(201).json({
-      success: true,
-      message: "User berhasil didaftarkan",
-      data: {
-        id: newUser.id,
-        name: newUser.name,
-        username: newUser.username,
-        role: newUser.role,
-      },
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message,
-    });
-  }
-};
+  } catch (error) {}
+}
 
 export const login = async (req, res) => {
   try {

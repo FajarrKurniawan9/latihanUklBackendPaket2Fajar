@@ -30,20 +30,8 @@ export const register = async (req, res) => {
       data: {
         name,
         username,
-        password: md5(password),
-        role,
-      },
-    });
-    res.status(201).json({
-      success: true,
-      message: "User berhasil didaftarkan",
-      data: {
-        id: newUser.id,
-        name: newUser.name,
-        username: newUser.username,
-        role: newUser.role,
-      },
-    });
+        password
+
   } catch (error) {
     res.status(500).json({
       success: false,
