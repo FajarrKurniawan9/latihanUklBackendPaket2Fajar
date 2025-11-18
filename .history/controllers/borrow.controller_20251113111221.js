@@ -14,11 +14,6 @@ export const borrowItem = async (req, res) => {
       where: { id: parseInt(inventory_id) },
     });
 
-    // Cek apakah user ada
-    const user = await prisma.user.findUnique({
-      where: { id: userId },
-    });
-
     if (!inventory) {
       return res.status(404).json({
         success: false,

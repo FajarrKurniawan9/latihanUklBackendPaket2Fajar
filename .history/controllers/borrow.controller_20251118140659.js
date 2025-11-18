@@ -19,6 +19,8 @@ export const borrowItem = async (req, res) => {
       where: { id: userId },
     });
 
+    
+
     if (!inventory) {
       return res.status(404).json({
         success: false,

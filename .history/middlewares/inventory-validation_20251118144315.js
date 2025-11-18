@@ -48,7 +48,7 @@ export const validateInventory = [
 ];
 
 export const validateBorrow = [
-  body("inventory_id")
+  body("inventory_id") @Map(
     .notEmpty()
     .withMessage("ID barang harus diisi")
     .isInt()

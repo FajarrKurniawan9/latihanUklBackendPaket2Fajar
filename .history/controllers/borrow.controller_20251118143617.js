@@ -7,6 +7,7 @@ export const borrowItem = async (req, res) => {
   try {
     const { inventory_id, borrow_date, return_date, quantity, notes } =
       req.body;
+      @ma
     const userId = req.user.id;
 
     // Cek apakah barang ada
