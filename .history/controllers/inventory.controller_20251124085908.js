@@ -107,7 +107,7 @@ export const getAllInventory = async (req, res) => {
   try {
     const inventory = await prisma.inventory.findMany({
       orderBy: {
-        createdAt: "asc",
+        createdAt: "as",
       },
     });
 
